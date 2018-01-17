@@ -21,7 +21,7 @@ public class main {
 		//Oppretter studentinstanse med infoen fra kommandolinja
 		Student opprettStudent = new Student(fName,lName,age);
 		opprettStudent.setlName("Etternavnersen");
-		System.out.println(opprettStudent.getfName()+ " " + opprettStudent.getAge());
+		System.out.println(opprettStudent.getfName()+ " " + opprettStudent.getlName()+ " " + opprettStudent.getAge());
 
 		//Henter og printer ut informasjon
 		System.out.println(Ola.getfName() + " " + Ola.getlName()+ ". Alder: " + Ola.getAge());

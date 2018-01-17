@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Oppgave2 {
+public class oppgave2 {
 
     public static void main(String[] args) {
         // Oppretter og instansierer et objekt av typen Scanner
