@@ -26,7 +26,7 @@ public class main {
 
         //Test av no lok greier
         Student opprettStudent = new Student(fName,lName,age);
-        //Endere
+        //Enderer
         opprettStudent.setlName("Etternavnersen");
         //Utskrift av lok
         System.out.println(opprettStudent.getfName()+ " "+ opprettStudent.getlName() + ". Alder: " +opprettStudent.getAge());
