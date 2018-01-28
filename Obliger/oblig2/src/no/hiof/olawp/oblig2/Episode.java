@@ -6,8 +6,6 @@ public class Episode {
     private String title;
     private int runtime;
 
-
-
     public Episode(int episodeNumber, int season, String title, int runtime) {
         this.episodeNumber = episodeNumber;
         this.season = season;
@@ -26,6 +24,8 @@ public class Episode {
     public String toString(){
         return "\n E" + episodeNumber + "S" + season + ". " + title + ".  Duration: " + runtime + " minutes. \n" ;
     }
+
+
 
     public int getEpisodeNumber() {
         return episodeNumber;
@@ -58,4 +58,5 @@ public class Episode {
     public void setRuntime(int runtime) {
         this.runtime = runtime;
     }
+
 }
