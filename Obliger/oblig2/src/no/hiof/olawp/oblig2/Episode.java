@@ -6,6 +6,7 @@ public class Episode {
     private String title;
     private int runtime;
 
+    //Konstruktør med spilletid
     public Episode(int episodeNumber, int season, String title, int runtime) {
         this.episodeNumber = episodeNumber;
         this.season = season;
@@ -13,13 +14,15 @@ public class Episode {
         this.runtime = runtime;
     }
 
+    //Konstruktør uten spilletid
     public Episode(int episodeNumber, int season, String title) {
         this.episodeNumber = episodeNumber;
         this.season = season;
         this.title = title;
     }
 
-
+    //Oppgave 3
+    //toString metoder
     @Override
     public String toString(){
         return "\n E" + episodeNumber + "S" + season + ". " + title + ".  Duration: " + runtime + " minutes. \n" ;
@@ -27,6 +30,7 @@ public class Episode {
 
 
 
+    //Getter og settere
     public int getEpisodeNumber() {
         return episodeNumber;
     }
