@@ -16,6 +16,9 @@ public class Production {
         this.runtime = runtime;
     }
 
+    public Production(String title) {
+    }
+
     public String getTitle() {
         return title;
     }

@@ -12,6 +12,12 @@ public class Episode extends Production {
         this.season = season;
     }
 
+    public Episode(int episodeNumber, int season, String title) {
+        super(title);
+        this.episodeNumber = episodeNumber;
+        this.season = season;
+    }
+
     @Override
     public String toString(){
         return ("\n E" + episodeNumber + "S" + season + ". " + super.getTitle() + ".  Duration: " + super.getRuntime() + " minutes. \n");
