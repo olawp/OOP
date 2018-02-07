@@ -45,6 +45,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Obliger/oblig2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -156,11 +157,12 @@
       <updated>1516821248498</updated>
       <workItem from="1516821261650" duration="75000" />
       <workItem from="1516927243716" duration="122000" />
+      <workItem from="1517994399995" duration="95000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197000" />
+    <option name="totallyTimeSpent" value="292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />

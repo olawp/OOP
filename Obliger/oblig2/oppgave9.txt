@@ -1,42 +1,38 @@
 Oppgave 9
 
 Class
-En klasse i java er i bunn og grunn en blueprint, eller en oppskrift på et objekt. Hvis vi trekker inn klassene 
-vi brukte i oblig 2, så forteller klassen f.eks hvilke ting vi trenger for å opprette et nytt Episode objekt, og funksjoner(metoder)
-vi kan gi til denne klassen. Når vi oppretter et Episode objekt i oblig 2 skal den inneholde ting som episodenummer, sesong, tittel og spilletid.
-Disse tingene definerer vi i Episode klassen, og lager en konstruktør som hjelper oss med å bygge objektene.
+En klasse i java er i bunn og grunn en blueprint, eller en oppskrift på et objekt. Klassen forteller hva vi trenger for å kunne opprette ett objekt, f.eks variabler og metoder. Klassen inneholder rett og slett kode som oppretter objekt. 
 
 Objekt
-Et objekt er det som man oppretter fra klassen, f.eks en tvserie. Kalles ofte en instanse av en klasse
+Et objekt er det som man oppretter fra en klasse, f.eks en tvserie. Det som blir opprettet kalles ofte en instanse av en klasse.  Vi oppretter nye objekter ved bruke av det reserverte navnet "new". F.eks "new Random = "
 
 Member(field)variable/feltvariabler
-Feltvariabler er variabler man lager som tilhører klassen de er lagt til i. Feltvariabler settet helst helt i toppen av en klasse der man definerer om den er privat eller offentlig, hvilken datatype den skal være og et navn.
+Feltvariabler er variabler man lager som tilhører klassen de er lagt til i. Feltvariabler settes  helt i toppen av en klasse der man definerer om den er privat eller offentlig, hvilken datatype den skal være og et navn.
 Man lager gjerne Gettere og Settere som lar deg få tak i variabelen eller endre den.
+Eksempel:
+private nt = 62;
+private String ola;
 
 Overloading
 Overloading er når man har flere metoder med samme navn, men som tar inn forskjellige parametere
-
-static int add(int a,int b){return a+b;}  
-static int add(int a,int b,int c){return a+b+c;} 
+	static int add(int a,int b){return a+b;}  
+	static int add(int a,int b,int c){return a+b+c;} 
 Her er et greit eksempel jeg fant på nettet. Metoden er lik, men siden det andre eksempelet tar inn flere parametere vil det da bli en overload.
 
 Overriding
 Overriding betyr å overstyre funksjonalitetet til en eksisterende metode.
 
 Extends
-Gjør så en klasse kan "arve" variabler og metoder, sålenge disse ikke er private. Hvis de er private skal man kunne bruke gettere for å kunne bruke variabelen eller metodene.
-
+Gjør så en klasse kan "arve" variabler og metoder fra en annen klasse. Brukes ofte når flere klasser deler flere feltvariabler så man slipper å opprette like variabler i flere klasser. Man slipper altså duplikater.
 Polymorphism
-At et objekt kan ha flere former/typer, altså at objekt kan være flere ting. Et eksempel kan være det vi gikk gjennom med Per Bisseberg, der vi hadde en Person klasse, en student klasse og en ansatt klasse. I dette tilfellet
- vil en en student være både et person objekt og et student objekt siden student objektet arver egenskaper fra person. 
+At et objekt kan ha flere former/typer, altså at objekt kan være flere ting. Et eksempel kan være det vi gikk gjennom med Per Bisseberg, der vi hadde en Person klasse, en student klasse og en ansatt klasse. I dette tilfellet vil en en student være både et person objekt og et student objekt siden student objektet arver egenskaper fra person. 
 
 Private, public, protected
-
-- private: Man kan ikke få tak i variabelen, metoden eller hva det nå enn er utenfor klassen den hører til.
+- private: Man kan ikke få tak i variabelen, metoden osv utenfor klassen den hører til.
 - public: Man kan få tak i metoden eller variabelen fra hvor som helst i prosjektet.
 - protected: Et element som blir deklarert som protected vil være synlig i klassen selv og i alle subklasser
 
 This og super
 
 - This: Refererer til dette objektet, altså objektet du jobber med. 
-- Super: Brukes for å få tak i variabler og metoder som tilhører dette(this) objektet men som er deklarer i en superklasse(I en klasse som er høyere i hierarkiet). 
+- Super: Brukes for å få tak i feltvariabler og metoder som tilhører foreldre klassen altså en overordnet klasse. I vår oblig ville vel det vært det vi kaller main. 
