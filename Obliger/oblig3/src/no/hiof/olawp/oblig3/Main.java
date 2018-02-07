@@ -48,9 +48,17 @@ public class Main {
 
         System.out.println("***************************************");
 
-        Film goodBadUgly = new Film("The Good, The Bad and the Ugly",161,"A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.");
+        Film goodBadUgly = new Film("The Good, The Bad and the Ugly",161,"A bounty hunting scam joins two men in an uneasy alliance against" +
+                " a third in a race to find a fortune in gold buried in a remote cemetery.", new Date(1966,11,23));
+        Film americanPsycho = new Film("American Psycho", 102,"A wealthy New York investment banking executive, Patrick Bateman, hides his alternate psychopathic ego from his co-workers and friends as he delves deeper into his violent, hedonistic fantasies."
+                ,new Date(2000,6,26));
+        Film empireStrikeBack = new Film("Star Wars: The Empire Strikes Back",124,"After the rebels are overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda. His friends accept shelter from a questionable ally as Darth Vader hunts them in a plan to capture Luke."
+        ,new Date(1980,9,10));
 
-        System.out.println(goodBadUgly.getTitle());
+
+        System.out.println(goodBadUgly.getTitle() + " - " +  goodBadUgly.getReleaseDate().getYear());
+        System.out.println(americanPsycho.getTitle() + " - " + americanPsycho.getReleaseDate().getYear());
+        System.out.println(empireStrikeBack.getTitle() + " - " + empireStrikeBack.getReleaseDate().getYear());
 
 
 

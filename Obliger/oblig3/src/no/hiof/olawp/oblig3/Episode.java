@@ -1,15 +1,23 @@
 package no.hiof.olawp.oblig3;
 
 
+import java.util.Date;
+
 public class Episode extends Production {
     private int episodeNumber;
     private int season;
 
 
-    public Episode(int episodeNumber,int season,String title, int runtime) {
-        super(title, runtime);
+    public Episode(int episodeNumber,int season,String title, int runtime, Date releaseDate) {
+        super(title,runtime, releaseDate);
         this.episodeNumber = episodeNumber;
         this.season = season;
+    }
+
+    public Episode(int episodeNumber,int season,String title, int runtime){
+        super(title,runtime);
+        this.season = season;
+        this.episodeNumber = episodeNumber;
     }
 
     public Episode(int episodeNumber, int season, String title) {
