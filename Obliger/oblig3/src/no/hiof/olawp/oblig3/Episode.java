@@ -6,14 +6,8 @@ public class Episode extends Production {
     private int season;
 
 
-    public Episode(int episodeNumber,int season, String title, int runtime) {
+    public Episode(int episodeNumber,int season,String title, int runtime) {
         super(title, runtime);
-        this.episodeNumber = episodeNumber;
-        this.season = season;
-    }
-
-    public Episode(String title, int episodeNumber, int season) {
-        super(title);
         this.episodeNumber = episodeNumber;
         this.season = season;
     }

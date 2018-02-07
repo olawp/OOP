@@ -46,6 +46,11 @@ public class Main {
         System.out.println("Average runtime is: " + MrRobot.getAvgRuntime() + " minutes.");
 
 
+        System.out.println("***************************************");
+
+        Film goodBadUgly = new Film("The Good, The Bad and the Ugly",161,"A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.");
+
+        System.out.println(goodBadUgly.getTitle());
 
 
 
