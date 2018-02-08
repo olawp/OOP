@@ -56,18 +56,17 @@ public class Main {
         ,new Date(1980,9,10));
 
 
-        System.out.println(goodBadUgly.getTitle() + " - " +  goodBadUgly.getReleaseDate().getYear());
-        System.out.println(americanPsycho.getTitle() + " - " + americanPsycho.getReleaseDate().getYear());
-        System.out.println(empireStrikeBack.getTitle() + " - " + empireStrikeBack.getReleaseDate().getYear());
 
+        Person sergioLeone = new Person("Sergio","Leone");
+        Person maryHarron = new Person("Mary","Harron");
+        Person irvinKershner = new Person("Irvin","Kershner");
+        goodBadUgly.setDirector(sergioLeone);
+        americanPsycho.setDirector(maryHarron);
+        empireStrikeBack.setDirector(irvinKershner);
 
-
-
-
-
-
-
-
+        System.out.println(goodBadUgly.getTitle() + " - " +  goodBadUgly.getReleaseDate().getYear()+ ". Director: " + goodBadUgly.getDirector());
+        System.out.println(americanPsycho.getTitle() + " - " + americanPsycho.getReleaseDate().getYear()+ ". Director: " + americanPsycho.getDirector());
+        System.out.println(empireStrikeBack.getTitle() + " - " + empireStrikeBack.getReleaseDate().getYear()+ ". Director: " + empireStrikeBack.getDirector());
 
 
 

@@ -7,6 +7,7 @@ public class Production {
     private int runtime;
     private String description;
     private Date releaseDate;
+    private Person director;
 
     public Production(String title, int runtime, String description, Date releaseDate) {
         this.title = title;
@@ -60,5 +61,13 @@ public class Production {
 
     public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
+    }
+
+    public Person getDirector() {
+        return director;
+    }
+
+    public void setDirector(Person director) {
+        this.director = director;
     }
 }
