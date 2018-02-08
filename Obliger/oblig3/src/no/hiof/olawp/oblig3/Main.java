@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         //Oppgave 2, lager episode objekter. Kommentert ut pga forløkka som genererer episoder.
-        //Episode one = new Episode(1,1, "eps1.0_hellofriend.mov",62);
+        //Episode one = new Episode(1,1, "eps1.0_hellofriend.mov",62,new Date(2013,1,23));
         //Episode two = new Episode(2, 1, "eps1.1_ones-and-zzer0es.mpeg",48);
 
         //Oppgave 2, lager TvShow objekt
@@ -64,9 +64,36 @@ public class Main {
         americanPsycho.setDirector(maryHarron);
         empireStrikeBack.setDirector(irvinKershner);
 
-        System.out.println(goodBadUgly.getTitle() + " - " +  goodBadUgly.getReleaseDate().getYear()+ ". Director: " + goodBadUgly.getDirector());
-        System.out.println(americanPsycho.getTitle() + " - " + americanPsycho.getReleaseDate().getYear()+ ". Director: " + americanPsycho.getDirector());
-        System.out.println(empireStrikeBack.getTitle() + " - " + empireStrikeBack.getReleaseDate().getYear()+ ". Director: " + empireStrikeBack.getDirector());
+        Person samEsmail = new Person("Sam","Esmail");
+        //one.setDirector(samEsmail);
+
+
+
+
+        //System.out.println(sergioLeone.getName());
+
+        Person markHamill  = new Person("Mark","Hamill");
+        Person carrieFisher  = new Person("Carrie","Fisher");
+        Person harrisonFord  = new Person("Harrison","Ford");
+
+        Role lukeSkywalker = new Role("Luke","Skywalker",markHamill);
+        Role leiaSkywalker = new Role("Leia","Skywalker",carrieFisher);
+        Role hanSolo = new Role("Han","Solo",harrisonFord);
+
+
+
+
+
+        //empireStrikeBack.addARole(lukeSkywalker);
+        empireStrikeBack.addMultipleRoles(lukeSkywalker,leiaSkywalker,hanSolo);
+
+        System.out.println(goodBadUgly.getTitle() + " - " +  goodBadUgly.getReleaseDate().getYear()+ ". Director: " + goodBadUgly.getDirector().getName());
+        System.out.println(americanPsycho.getTitle() + " - " + americanPsycho.getReleaseDate().getYear()+ ". Director: " + americanPsycho.getDirector().getName());
+        System.out.println(empireStrikeBack.getTitle() + " - " + empireStrikeBack.getReleaseDate().getYear()+ ". Director: " + empireStrikeBack.getDirector().getName() + ".\n Actors: \n" + empireStrikeBack.getRoleArray());
+        //System.out.println(one.getTitle() + " - " + one.getReleaseDate().getYear()+  ". Director: "+ one.getDirector().getName());
+
+
+
 
 
 

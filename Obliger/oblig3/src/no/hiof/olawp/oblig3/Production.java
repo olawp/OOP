@@ -1,5 +1,7 @@
 package no.hiof.olawp.oblig3;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Production {
@@ -8,6 +10,7 @@ public class Production {
     private String description;
     private Date releaseDate;
     private Person director;
+    private ArrayList<Role> roleArray = new ArrayList<>();
 
     public Production(String title, int runtime, String description, Date releaseDate) {
         this.title = title;
@@ -30,6 +33,16 @@ public class Production {
     public Production(String title) {
         this.title = title;
     }
+
+
+    public void addARole(Role role){
+        this.roleArray.add(role);
+    }
+
+    public void addMultipleRoles(Role ... role){
+        this.roleArray.addAll(Arrays.asList(role));
+    }
+
 
     public String getTitle() {
         return title;
@@ -69,5 +82,9 @@ public class Production {
 
     public void setDirector(Person director) {
         this.director = director;
+    }
+
+    public ArrayList<Role> getRoleArray() {
+        return roleArray;
     }
 }
