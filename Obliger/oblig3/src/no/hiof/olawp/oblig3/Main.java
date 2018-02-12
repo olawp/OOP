@@ -80,6 +80,14 @@ public class Main {
         Role leiaSkywalker = new Role("Leia","Skywalker",carrieFisher);
         Role hanSolo = new Role("Han","Solo",harrisonFord);
 
+        Person ramiMalik = new Person("Rami","Malik");
+        Person christianSlater = new Person("Christian","Slater");
+        Person carlyChaikin = new Person("Carly","Chaikin");
+
+        Role elliotAlderson = new Role("Elliot","Alderson",ramiMalik);
+        Role mrRobot = new Role("Mr", "Robot",christianSlater);
+        Role darlene = new Role("Darlene","", carlyChaikin);
+
 
 
 
@@ -87,10 +95,13 @@ public class Main {
         //empireStrikeBack.addARole(lukeSkywalker);
         empireStrikeBack.addMultipleRoles(lukeSkywalker,leiaSkywalker,hanSolo);
 
+
         System.out.println(goodBadUgly.getTitle() + " - " +  goodBadUgly.getReleaseDate().getYear()+ ". Director: " + goodBadUgly.getDirector().getName());
         System.out.println(americanPsycho.getTitle() + " - " + americanPsycho.getReleaseDate().getYear()+ ". Director: " + americanPsycho.getDirector().getName());
         System.out.println(empireStrikeBack.getTitle() + " - " + empireStrikeBack.getReleaseDate().getYear()+ ". Director: " + empireStrikeBack.getDirector().getName() + ".\n Actors: \n" + empireStrikeBack.getRoleArray());
         //System.out.println(one.getTitle() + " - " + one.getReleaseDate().getYear()+  ". Director: "+ one.getDirector().getName());
+
+        System.out.println(goodBadUgly);
 
 
 
