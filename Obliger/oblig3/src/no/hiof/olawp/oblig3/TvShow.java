@@ -1,5 +1,6 @@
 package no.hiof.olawp.oblig3;
 
+import java.lang.reflect.TypeVariable;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -65,12 +66,21 @@ public class TvShow{
     }
 
 
+    public void getCast(){
+    for (Episode a:episodeList){
+        for (Role b: a.getRoleArray()){
+            System.out.println(b);
+        }
+    }
+    }
+
+
 
     //Oppgave 3
     //toString metoder
     @Override
     public String toString(){
-        return title+ "  \n"  + description + " Release date: " + releaseDate.getYear() + "\n" + episodeList;
+        return title+ "  \n"  + description + " - Release date: " + releaseDate.getYear() + "\n" + episodeList;
     }
 
 

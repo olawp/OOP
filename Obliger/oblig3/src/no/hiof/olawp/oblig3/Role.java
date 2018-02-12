@@ -1,7 +1,6 @@
 package no.hiof.olawp.oblig3;
 
 
-
 public class Role {
     private String charFirstName;
     private String charLastName;

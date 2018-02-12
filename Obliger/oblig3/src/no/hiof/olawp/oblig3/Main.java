@@ -1,5 +1,6 @@
 package no.hiof.olawp.oblig3;
 
+import java.time.chrono.ThaiBuddhistChronology;
 import java.util.Date;
 import java.util.Random;
 
@@ -7,6 +8,7 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
+
         //Oppgave 2, lager episode objekter. Kommentert ut pga forløkka som genererer episoder.
         //Episode one = new Episode(1,1, "eps1.0_hellofriend.mov",62,new Date(2013,1,23));
         //Episode two = new Episode(2, 1, "eps1.1_ones-and-zzer0es.mpeg",48);
@@ -48,6 +50,9 @@ public class Main {
 
         System.out.println("***************************************");
 
+
+
+
         Film goodBadUgly = new Film("The Good, The Bad and the Ugly",161,"A bounty hunting scam joins two men in an uneasy alliance against" +
                 " a third in a race to find a fortune in gold buried in a remote cemetery.", new Date(1966,11,23));
         Film americanPsycho = new Film("American Psycho", 102,"A wealthy New York investment banking executive, Patrick Bateman, hides his alternate psychopathic ego from his co-workers and friends as he delves deeper into his violent, hedonistic fantasies."
@@ -57,40 +62,37 @@ public class Main {
 
 
 
-        Person sergioLeone = new Person("Sergio","Leone");
-        Person maryHarron = new Person("Mary","Harron");
-        Person irvinKershner = new Person("Irvin","Kershner");
+        Person sergioLeone = new Person("Sergio","Leone",60);
+        Person maryHarron = new Person("Mary","Harron",48);
+        Person irvinKershner = new Person("Irvin","Kershner",2010);
         goodBadUgly.setDirector(sergioLeone);
         americanPsycho.setDirector(maryHarron);
         empireStrikeBack.setDirector(irvinKershner);
 
-        Person samEsmail = new Person("Sam","Esmail");
-        //one.setDirector(samEsmail);
-
-
-
 
         //System.out.println(sergioLeone.getName());
 
-        Person markHamill  = new Person("Mark","Hamill");
-        Person carrieFisher  = new Person("Carrie","Fisher");
-        Person harrisonFord  = new Person("Harrison","Ford");
+        //Person- og rolleobjekter
+
+        Person markHamill  = new Person("Mark","Hamill",66);
+        Person carrieFisher  = new Person("Carrie","Fisher",60);
+        Person harrisonFord  = new Person("Harrison","Ford",75);
+        Person ramiMalek = new Person("Rami","Malek",36);
+        Person christianSlater = new Person("Christian","Slater",48);
+        Person carlyChaikin = new Person("Carly","Chaikin",27);
+        Person bryanCranston = new Person("Bryan", "Cranston",61);
+        Person aaronPaul = new Person("Aaron","Paul",38);
 
         Role lukeSkywalker = new Role("Luke","Skywalker",markHamill);
         Role leiaSkywalker = new Role("Leia","Skywalker",carrieFisher);
         Role hanSolo = new Role("Han","Solo",harrisonFord);
-
-        Person ramiMalik = new Person("Rami","Malik");
-        Person christianSlater = new Person("Christian","Slater");
-        Person carlyChaikin = new Person("Carly","Chaikin");
-
-        Role elliotAlderson = new Role("Elliot","Alderson",ramiMalik);
+        Role elliotAlderson = new Role("Elliot","Alderson",ramiMalek);
         Role mrRobot = new Role("Mr", "Robot",christianSlater);
         Role darlene = new Role("Darlene","", carlyChaikin);
+        Role walterWhite = new Role("Walter","White",bryanCranston);
+        Role jessePinkman = new Role("Jesse","Pinkman",aaronPaul);
 
-
-
-
+        //Jobbing med filmobjekter
 
         //empireStrikeBack.addARole(lukeSkywalker);
         empireStrikeBack.addMultipleRoles(lukeSkywalker,leiaSkywalker,hanSolo);
@@ -102,6 +104,27 @@ public class Main {
         //System.out.println(one.getTitle() + " - " + one.getReleaseDate().getYear()+  ". Director: "+ one.getDirector().getName());
 
         System.out.println(goodBadUgly);
+
+        System.out.println("**************************************");
+
+        //Oppretter et TvShow objekt og noen episode objekter
+
+        TvShow breakingBad = new TvShow("Breaking Bad", "A show about drugs", new Date(2008,20,01));
+        Episode pilot = new Episode(1,1,"Pilot",58);
+        Episode catsInTheBag = new Episode(2,1,"Cat's in the bag...",48);
+        Episode andTheBagsInTheRiver = new Episode(3,1,"...And the bag's in the river",48);
+
+        breakingBad.addEpisode(pilot);
+        breakingBad.addEpisode(catsInTheBag);
+        breakingBad.addEpisode(andTheBagsInTheRiver);
+        pilot.addMultipleRoles(walterWhite,jessePinkman);
+        catsInTheBag.addMultipleRoles(walterWhite,jessePinkman);
+        andTheBagsInTheRiver.addMultipleRoles(walterWhite,jessePinkman);
+
+
+        breakingBad.getCast();
+
+
 
 
 
