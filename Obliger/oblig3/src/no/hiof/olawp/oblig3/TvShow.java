@@ -1,5 +1,6 @@
 package no.hiof.olawp.oblig3;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.TypeVariable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -65,13 +66,14 @@ public class TvShow{
         updateAverageRuntime();
     }
 
-
-    public void getCast(){
+    //Oppretter et nytt array for å legge medlemmer av casten i. Bruker en for each løkke for å gå gjennom episodelisten til serien,
+    // legger så til alle tingene som likker i RoleArray og legger de til i arrayet vi opprettet tidligere og returnerer det.
+    public ArrayList getCast(){
+        ArrayList<Role>CastArray = new ArrayList<>();
     for (Episode a:episodeList){
-        for (Role b: a.getRoleArray()){
-            System.out.println(b);
+        CastArray.addAll(a.getRoleArray());
         }
-    }
+        return CastArray;
     }
 
 
@@ -82,9 +84,6 @@ public class TvShow{
     public String toString(){
         return title+ "  \n"  + description + " - Release date: " + releaseDate.getYear() + "\n" + episodeList;
     }
-
-
-
 
 
 

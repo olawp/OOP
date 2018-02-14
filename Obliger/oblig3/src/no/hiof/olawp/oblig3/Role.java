@@ -12,12 +12,13 @@ public class Role {
         this.actor = actor;
     }
 
-
+    //toString metode
     @Override
     public String toString() {
         return "\nCharacter: " + charFirstName + " " + charLastName + ". Actor: " + actor + "\n";
     }
 
+    //Gettere og settere
     public String getCharFirstName() {
         return charFirstName;
     }

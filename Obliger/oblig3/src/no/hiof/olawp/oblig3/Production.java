@@ -34,18 +34,21 @@ public class Production {
         this.title = title;
     }
 
-
+    //Meotde for å legge til en rolle
     public void addARole(Role role){
         this.roleArray.add(role);
     }
 
+    //En annen måte å gjøre dette på er å lage et array som du putter role objektene i. I addMultipleRoles metoden
+    //flytter du elementee fra dette arrayet over til Rolearray.
+    //Jeg valgte denne metoden siden jeg syntes det var en mer fornuftig og praktisk måte å gjøre det på.
     public void addMultipleRoles(Role ... role){
         this.roleArray.addAll(Arrays.asList(role));
     }
 
 
 
-
+    //Gettere og settere
     public String getTitle() {
         return title;
     }
