@@ -29,8 +29,7 @@ public class Film extends Production implements Comparable<Film> {
     }
 
     @Override
-    public int compareTo(Film o) {
-        int compare = this.getTitle().compareTo(o.getTitle());
+    public int compareTo(Film o) { int compare = this.getTitle().compareTo(o.getTitle());
         if (compare < 0) {
             return -1;
         }

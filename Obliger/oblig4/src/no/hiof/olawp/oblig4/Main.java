@@ -147,5 +147,10 @@ public class Main {
         Collections.sort(testShowArray);
         System.out.println(testShowArray);
 
+        System.out.println("********************************************");
+
+        Collections.sort(MrRobot.getEpisodeList());
+        System.out.println(MrRobot.getEpisodeList());
+
     }
 }

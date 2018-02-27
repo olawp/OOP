@@ -3,7 +3,7 @@ package no.hiof.olawp.oblig4;
 
 import java.util.Date;
 
-public class Episode extends Production implements Comparable {
+public class Episode extends Production implements Comparable<Episode> {
     private int episodeNumber;
     private int season;
 
@@ -28,7 +28,19 @@ public class Episode extends Production implements Comparable {
 
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Episode o) {
+        if (this.season < o.season){
+            return -1;
+        }
+        else if (this.season >o.season){
+            return 1;
+        }
+        else if (this.getEpisodeNumber() < o.episodeNumber){
+            return -1;
+        }
+        else if (this.getEpisodeNumber() < o.episodeNumber){
+            return 1;
+        }
         return 0;
     }
 
