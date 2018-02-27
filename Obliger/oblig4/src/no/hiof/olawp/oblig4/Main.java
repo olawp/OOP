@@ -1,8 +1,8 @@
 package no.hiof.olawp.oblig4;
 
 import java.time.chrono.ThaiBuddhistChronology;
-import java.util.Date;
-import java.util.Random;
+import java.util.*;
+import java.util.Collection;
 
 
 public class Main {
@@ -71,7 +71,7 @@ public class Main {
         //Opprettet noen personobjekter, som blir satt til å være regissøren til filmene vi lagde tidligere
         Person sergioLeone = new Person("Sergio","Leone",60);
         Person maryHarron = new Person("Mary","Harron",48);
-        Person irvinKershner = new Person("Irvin","Kershner",2010);
+        Person irvinKershner = new Person("Irvin","Kershner",69);
         goodBadUgly.setDirector(sergioLeone);
         americanPsycho.setDirector(maryHarron);
         empireStrikeBack.setDirector(irvinKershner);
@@ -130,6 +130,22 @@ public class Main {
         catsInTheBag.addMultipleRoles(walterWhite,jessePinkman);
         andTheBagsInTheRiver.addMultipleRoles(walterWhite,jessePinkman);
 
+        System.out.println(empireStrikeBack);
+
+
+        System.out.println("********************************************");
+
+        ArrayList<Film> testFilmArray = Film.getFilmArray();
+        System.out.println(testFilmArray);
+        Collections.sort(testFilmArray);
+        System.out.println(testFilmArray);
+
+        System.out.println("********************************************");
+
+        ArrayList<TvShow> testShowArray = TvShow.getTvShowArray();
+        System.out.println(testShowArray);
+        Collections.sort(testShowArray);
+        System.out.println(testShowArray);
 
     }
 }

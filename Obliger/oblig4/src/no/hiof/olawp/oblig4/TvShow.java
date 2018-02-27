@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 
-public class TvShow implements Comparable{
+public class TvShow implements Comparable<TvShow>{
     private String title;
     private String description;
     private Date releaseDate;
@@ -89,7 +89,14 @@ public class TvShow implements Comparable{
 
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(TvShow o) {
+        int compare = this.getTitle().compareTo(o.getTitle());
+        if (compare < 0) {
+            return -1;
+        }
+        else if (compare > 0){
+            return 1;
+        }
         return 0;
     }
 
