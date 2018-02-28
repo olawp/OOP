@@ -1,8 +1,8 @@
 package no.hiof.olawp.oblig4;
 
-import java.time.chrono.ThaiBuddhistChronology;
+import no.hiof.olawp.oblig4.model.*;
+
 import java.util.*;
-import java.util.Collection;
 
 
 public class Main {

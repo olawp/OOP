@@ -1,4 +1,4 @@
-package no.hiof.olawp.oblig4;
+package no.hiof.olawp.oblig4.model;
 
 
 public class Role {

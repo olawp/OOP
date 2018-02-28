@@ -1,7 +1,5 @@
-package no.hiof.olawp.oblig4;
+package no.hiof.olawp.oblig4.model;
 
-import java.lang.reflect.Array;
-import java.lang.reflect.TypeVariable;
 import java.util.ArrayList;
 import java.util.Date;
 

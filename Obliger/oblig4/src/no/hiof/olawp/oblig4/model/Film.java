@@ -1,9 +1,7 @@
-package no.hiof.olawp.oblig4;
+package no.hiof.olawp.oblig4.model;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
-import java.util.Iterator;
 
 
 public class Film extends Production implements Comparable<Film> {
@@ -30,7 +28,7 @@ public class Film extends Production implements Comparable<Film> {
 
     @Override
     public int compareTo(Film o) { int compare = this.getTitle().compareTo(o.getTitle());
-        if (compare < 0) {
+    if (compare < 0) {
             return -1;
         }
         else if (compare > 0){
