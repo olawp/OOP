@@ -39,7 +39,7 @@ public class MainJavaFX extends Application {
             fxmlLoader.setLocation(getClass().getResource("view/FilmOverview.fxml"));
             Parent mainLayout = fxmlLoader.load();
 
-            Scene mainScene = new Scene(mainLayout, 600, 400);
+            Scene mainScene = new Scene(mainLayout, 800, 600);
             primaryStage.setScene(mainScene);
             primaryStage.setTitle("Movie overview");
             primaryStage.setResizable(false);
@@ -51,7 +51,6 @@ public class MainJavaFX extends Application {
         }
 
     }
-
 
 
     private void showMessageBox(String message){

@@ -49,15 +49,11 @@ public class FilmOverviewController {
 
     }
 
-    @FXML
+    /*@FXML
     public void setFilmAndQuit(ActionEvent actionEvent){
         pickedFilm = filmListView.getSelectionModel().getSelectedItem();
         stage.close();
-    }
+    }*/
 
 
-
-    public void setStage(Stage stage){
-        this.stage = stage;
-    }
 }
