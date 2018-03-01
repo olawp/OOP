@@ -31,31 +31,28 @@ public class MainJavaFX extends Application {
 
 
     @Override
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
-        goToMainview();
-    }
 
-
-    public void goToMainview(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("view/FilmOverview.fxml"));
             Parent mainLayout = fxmlLoader.load();
 
-            Scene mainScene = new Scene(mainLayout,600,400);
+            Scene mainScene = new Scene(mainLayout, 600, 400);
             primaryStage.setScene(mainScene);
             primaryStage.setTitle("Movie overview");
+            primaryStage.setResizable(false);
+            primaryStage.centerOnScreen();
             primaryStage.show();
         }
         catch (IOException ioe){
-            showMessageBox("I/O error: " + ioe.getMessage());
+            showMessageBox(ioe.getMessage());
         }
-        catch (IllegalStateException exc){
-            showMessageBox("Some error occured: " + exc.getMessage());
-            System.err.println(exc);
-        }
+
     }
+
+
 
     private void showMessageBox(String message){
         Alert errorAlert = new Alert(Alert.AlertType.ERROR);
@@ -71,5 +68,8 @@ public class MainJavaFX extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
     }
+
+
 }

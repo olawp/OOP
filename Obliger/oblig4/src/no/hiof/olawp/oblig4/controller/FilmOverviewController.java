@@ -10,6 +10,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import no.hiof.olawp.oblig4.Main;
 import no.hiof.olawp.oblig4.MainJavaFX;
 import no.hiof.olawp.oblig4.model.Film;
 
@@ -30,11 +31,11 @@ public class FilmOverviewController {
     private int filmIndex = 0;
     private MainJavaFX mainJavaFX;
 
+
     @FXML
-    public void initialize(){
+    public void initialize() {
 
-        ObservableList<Film> filmObservableList = mainJavaFX.getAllFilms();
-
+        ObservableList<Film> filmObservableList = MainJavaFX.mainJavaFXApplication.getAllFilms();
         if (filmIndex < filmObservableList.size()) {
 
             filmListView.setItems(MainJavaFX.mainJavaFXApplication.getAllFilms());
@@ -48,7 +49,6 @@ public class FilmOverviewController {
             Film aFilm = filmObservableList.get(filmIndex);
 
             filmInfo(aFilm);
-
         }
     }
 
@@ -66,6 +66,8 @@ public class FilmOverviewController {
         pickedFilm = filmListView.getSelectionModel().getSelectedItem();
         stage.close();
     }
+
+
 
     public void setStage(Stage stage){
         this.stage = stage;
