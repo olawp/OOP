@@ -15,7 +15,7 @@ public class Film extends Production implements Comparable<Film> {
 
     @Override
     public String toString(){
-        return super.getTitle() + " - Runtime: " + super.getRuntime() + " minutes.";
+        return super.getTitle()/* + " - Runtime: " + super.getRuntime() + " minutes."*/;
     }
 
     public static ArrayList<Film> getFilmArray() {
