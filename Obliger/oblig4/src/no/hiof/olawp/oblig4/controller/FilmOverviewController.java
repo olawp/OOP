@@ -5,10 +5,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import no.hiof.olawp.oblig4.Main;
 import no.hiof.olawp.oblig4.MainJavaFX;
@@ -33,32 +30,23 @@ public class FilmOverviewController {
 
 
     @FXML
-    public void initialize() {
-
+    public void initialize(){
         ObservableList<Film> filmObservableList = MainJavaFX.mainJavaFXApplication.getAllFilms();
-        if (filmIndex < filmObservableList.size()) {
 
-            filmListView.setItems(MainJavaFX.mainJavaFXApplication.getAllFilms());
-            filmListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Film>() {
-                @Override
-                public void changed(ObservableValue<? extends Film> observable, Film oldFilm, Film newFilm) {
-                    System.out.println(newFilm);
-                }
-            });
+        filmListView.setItems(MainJavaFX.mainJavaFXApplication.getAllFilms());
+        filmListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        filmListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Film>() {
+            @Override
+            public void changed(ObservableValue<? extends Film> observable, Film oldFilm, Film newFilm) {
+                filmDescription.setText(newFilm.getDescription());
+                filmRuntime.setText(String.valueOf(newFilm.getRuntime()));
+                filmReleaseDate.setText(String.valueOf(newFilm.getReleaseDate().getYear()));
+                filmTitle.setText(newFilm.getTitle());
 
-            Film aFilm = filmObservableList.get(filmIndex);
+            }
+        });
 
-            filmInfo(aFilm);
-        }
-    }
 
-    private void filmInfo(Film aFilm){
-        if (aFilm != null){
-            filmTitle.setText(aFilm.getTitle());
-            filmDescription.setText(aFilm.getDescription());
-            filmReleaseDate.setText(aFilm.getReleaseDate().toString());
-            filmRuntime.setText(String.valueOf(aFilm.getRuntime()));
-        }
     }
 
     @FXML
