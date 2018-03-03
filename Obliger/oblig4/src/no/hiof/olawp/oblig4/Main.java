@@ -2,6 +2,7 @@ package no.hiof.olawp.oblig4;
 
 import no.hiof.olawp.oblig4.model.*;
 
+import java.time.LocalDate;
 import java.util.*;
 
 
@@ -18,7 +19,7 @@ public class Main {
 
         //Oppgave 2, lager TvShow objekt
         TvShow MrRobot = new TvShow("Mr Robot", "Follows Elliot, a young programmer working as a cyber-security engineer by day, and a vigilante hacker by night."
-                ,new Date(2015,07,24));
+                ,LocalDate.of(2015,07,24));
 
         //Oppgave 2, testing av å legge til i array
         //MrRobot.addEpisode(one);
@@ -61,11 +62,11 @@ public class Main {
 
         //Oppretter noen filmobjekter
         Film goodBadUgly = new Film("The Good, The Bad and the Ugly",161,"A bounty hunting scam joins two men in an uneasy alliance against" +
-                " a third in a race to find a fortune in gold buried in a remote cemetery.", new Date(1966,11,23));
+                " a third in a race to find a fortune in gold buried in a remote cemetery.", LocalDate.of(1966,11,23));
         Film americanPsycho = new Film("American Psycho", 102,"A wealthy New York investment banking executive, Patrick Bateman, hides his alternate psychopathic ego from his co-workers and friends as he delves deeper into his violent, hedonistic fantasies."
-                ,new Date(2000,6,26));
+                ,LocalDate.of(2000,6,26));
         Film empireStrikeBack = new Film("Star Wars: The Empire Strikes Back",124,"After the rebels are overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda. His friends accept shelter from a questionable ally as Darth Vader hunts them in a plan to capture Luke."
-                ,new Date(1980,9,10));
+                ,LocalDate.of(1980,9,10));
 
 
         //Opprettet noen personobjekter, som blir satt til å være regissøren til filmene vi lagde tidligere
@@ -116,7 +117,7 @@ public class Main {
 
         //Oppretter et TvShow objekt og noen episode objekter
 
-        TvShow breakingBad = new TvShow("Breaking Bad", "A show about drugs", new Date(2008,20,01));
+        TvShow breakingBad = new TvShow("Breaking Bad", "A show about drugs", LocalDate.of(2008,1,20));
         Episode pilot = new Episode(1,1,"Pilot",58);
         Episode catsInTheBag = new Episode(2,1,"Cat's in the bag...",48);
         Episode andTheBagsInTheRiver = new Episode(3,1,"...And the bag's in the river",48);

@@ -13,6 +13,12 @@ import no.hiof.olawp.oblig4.model.Film;
 
 public class FilmOverviewController {
     @FXML
+    private Button filmBtnNew;
+    @FXML
+    private Button filmBtnEdit;
+    @FXML
+    private Button filmBtnDelete;
+    @FXML
     private Label filmTitle;
     @FXML
     private TextArea filmDescription;
@@ -27,11 +33,12 @@ public class FilmOverviewController {
     private Film pickedFilm;
     private int filmIndex = 0;
     private MainJavaFX mainJavaFX;
+    public ObservableList<Film> filmObservableList = MainJavaFX.mainJavaFXApplication.getAllFilms();
 
 
     @FXML
     public void initialize(){
-        ObservableList<Film> filmObservableList = MainJavaFX.mainJavaFXApplication.getAllFilms();
+
 
         filmListView.setItems(MainJavaFX.mainJavaFXApplication.getAllFilms());
         filmListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -45,15 +52,15 @@ public class FilmOverviewController {
 
             }
         });
-
-
     }
 
-    /*@FXML
-    public void setFilmAndQuit(ActionEvent actionEvent){
-        pickedFilm = filmListView.getSelectionModel().getSelectedItem();
-        stage.close();
-    }*/
+    @FXML
+    public void goToEditScene(ActionEvent actionEvent){
+        MainJavaFX.mainJavaFXApplication.goToEditView();
+    }
 
-
+    public ListView<Film> getFilmListView() {
+        return filmListView;
+    }
 }
+

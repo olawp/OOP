@@ -1,5 +1,6 @@
 package no.hiof.olawp.oblig4.model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -8,9 +9,13 @@ public class Film extends Production implements Comparable<Film> {
 
     private static ArrayList<Film> filmArray = new ArrayList<>();
 
-    public Film(String title, int runtime, String description, Date releaseDate) {
+    public Film(String title, int runtime, String description, LocalDate releaseDate) {
         super(title, runtime, description, releaseDate);
         filmArray.add(this);
+    }
+
+    public Film (){
+
     }
 
     @Override
@@ -36,4 +41,6 @@ public class Film extends Production implements Comparable<Film> {
         }
         return 0;
     }
+
+
 }

@@ -1,6 +1,7 @@
 package no.hiof.olawp.oblig4.model;
 
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Episode extends Production implements Comparable<Episode> {
@@ -8,7 +9,7 @@ public class Episode extends Production implements Comparable<Episode> {
     private int season;
 
 
-    public Episode(int episodeNumber,int season,String title, int runtime, Date releaseDate) {
+    public Episode(int episodeNumber,int season,String title, int runtime, LocalDate releaseDate) {
         super(title,runtime, releaseDate);
         this.episodeNumber = episodeNumber;
         this.season = season;

@@ -1,25 +1,25 @@
 package no.hiof.olawp.oblig4.model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 
 public abstract class Production {
     private String title;
     private int runtime;
     private String description;
-    private Date releaseDate;
+    private LocalDate releaseDate;
     private Person director;
     private ArrayList<Role> roleArray = new ArrayList<>();
 
-    public Production(String title, int runtime, String description, Date releaseDate) {
+    public Production(String title, int runtime, String description, LocalDate releaseDate) {
         this.title = title;
         this.runtime = runtime;
         this.description = description;
         this.releaseDate = releaseDate;
     }
 
-    public Production(String title, int runtime,Date releaseDate) {
+    public Production(String title, int runtime,LocalDate releaseDate) {
         this.title = title;
         this.runtime = runtime;
         this.releaseDate = releaseDate;
@@ -28,6 +28,10 @@ public abstract class Production {
     public Production(String title, int runtime) {
         this.title = title;
         this.runtime = runtime;
+    }
+
+    public Production(){
+
     }
 
     public Production(String title) {
@@ -73,11 +77,11 @@ public abstract class Production {
         this.description = description;
     }
 
-    public Date getReleaseDate() {
+    public LocalDate getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
     }
 

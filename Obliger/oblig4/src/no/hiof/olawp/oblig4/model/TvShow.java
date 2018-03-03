@@ -1,5 +1,6 @@
 package no.hiof.olawp.oblig4.model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -7,14 +8,14 @@ import java.util.Date;
 public class TvShow implements Comparable<TvShow>{
     private String title;
     private String description;
-    private Date releaseDate;
+    private LocalDate releaseDate;
     private ArrayList<Episode> episodeList = new ArrayList<>();
     private float avgRuntime;
     private int numberOfSeasons;
     private static ArrayList<TvShow> tvShowArray = new ArrayList<>();
 
     //Konstruktør
-    public TvShow(String title, String description, Date releaseDate) {
+    public TvShow(String title, String description, LocalDate releaseDate) {
         this.title = title;
         this.description = description;
         this.releaseDate = releaseDate;
@@ -115,11 +116,11 @@ public class TvShow implements Comparable<TvShow>{
         this.description = description;
     }
 
-    public Date getReleaseDate() {
+    public LocalDate getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
     }
 
