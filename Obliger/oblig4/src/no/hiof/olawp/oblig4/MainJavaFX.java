@@ -15,7 +15,6 @@ import no.hiof.olawp.oblig4.model.Film;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.Date;
 
 public class MainJavaFX extends Application {
 
@@ -123,7 +122,7 @@ public class MainJavaFX extends Application {
     }
 
 
-    private void showMessageBox(String message){
+    public void showMessageBox(String message){
         Alert e = new Alert(Alert.AlertType.ERROR);
         e.setTitle("Error during loading of GUI.");
         e.setHeaderText(null);

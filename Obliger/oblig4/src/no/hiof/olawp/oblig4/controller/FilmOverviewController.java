@@ -6,18 +6,10 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
-import no.hiof.olawp.oblig4.Main;
 import no.hiof.olawp.oblig4.MainJavaFX;
 import no.hiof.olawp.oblig4.model.Film;
 
 public class FilmOverviewController {
-    @FXML
-    private Button filmBtnNew;
-    @FXML
-    private Button filmBtnEdit;
-    @FXML
-    private Button filmBtnDelete;
     @FXML
     private Label filmTitle;
     @FXML
@@ -29,11 +21,7 @@ public class FilmOverviewController {
     @FXML
     private ListView<Film> filmListView;
 
-    private Stage stage;
-    private Film pickedFilm;
-    private MainJavaFX mainJavaFX;
     public ObservableList<Film> filmObservableList = MainJavaFX.mainJavaFXApplication.getAllFilms();
-
 
     @FXML
     public void initialize(){
@@ -59,7 +47,11 @@ public class FilmOverviewController {
 
     @FXML
     public void deleteFilm(ActionEvent actionEvent){
-        filmListView.getItems().remove(filmListView.getSelectionModel().getSelectedIndex());
+            if (!filmListView.getItems().isEmpty()) {
+                filmListView.getItems().remove(filmListView.getSelectionModel().getSelectedIndex());
+            }
+            else {
+                MainJavaFX.mainJavaFXApplication.showMessageBox("You cant delete an object that does not exist. Lul");            }
     }
 
 

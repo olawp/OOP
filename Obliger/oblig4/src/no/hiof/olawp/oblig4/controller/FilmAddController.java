@@ -42,7 +42,7 @@ public class FilmAddController {
     private void addFilm(ActionEvent actionEvent){
         try{
             if (filmTitleAdd.getText().isEmpty())
-                throw new Error("Please type in a title.");
+                throw new Error("Please type in a title."); //Vises bare i konsollen
             if (filmDescAdd.getText().isEmpty())
                 throw new Error("Please type in a small description");
             if (filmReleaseAdd.getValue() == null)
