@@ -31,7 +31,6 @@ public class FilmOverviewController {
 
     private Stage stage;
     private Film pickedFilm;
-    private int filmIndex = 0;
     private MainJavaFX mainJavaFX;
     public ObservableList<Film> filmObservableList = MainJavaFX.mainJavaFXApplication.getAllFilms();
 
@@ -52,7 +51,17 @@ public class FilmOverviewController {
 
             }
         });
+
+        if (!filmListView.getItems().isEmpty()) {
+            filmListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
+        }
     }
+
+    @FXML
+    public void deleteFilm(ActionEvent actionEvent){
+        filmListView.getItems().remove(filmListView.getSelectionModel().getSelectedIndex());
+    }
+
 
     @FXML
     public void goToEditScene(ActionEvent actionEvent){
@@ -61,6 +70,11 @@ public class FilmOverviewController {
 
     public ListView<Film> getFilmListView() {
         return filmListView;
+    }
+    @FXML
+    public void goToAddScene(ActionEvent actionEvent) {
+        MainJavaFX.mainJavaFXApplication.goToAddView();
+
     }
 }
 
