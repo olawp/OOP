@@ -51,7 +51,8 @@ public class FilmOverviewController {
                 filmListView.getItems().remove(filmListView.getSelectionModel().getSelectedIndex());
             }
             else {
-                MainJavaFX.mainJavaFXApplication.showMessageBox("You cant delete an object that does not exist. Lul");            }
+                MainJavaFX.mainJavaFXApplication.showMessageBox("You cant delete an object that does not exist. Lul");
+            }
     }
 
 
