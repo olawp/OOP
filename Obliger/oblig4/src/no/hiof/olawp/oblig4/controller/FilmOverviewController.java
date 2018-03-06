@@ -21,12 +21,10 @@ public class FilmOverviewController {
     @FXML
     private ListView<Film> filmListView;
 
-    public ObservableList<Film> filmObservableList = MainJavaFX.mainJavaFXApplication.getAllFilms();
+    //public ObservableList<Film> filmObservableList = MainJavaFX.mainJavaFXApplication.getAllFilms();
 
     @FXML
     public void initialize(){
-
-
         filmListView.setItems(MainJavaFX.mainJavaFXApplication.getAllFilms());
         filmListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         filmListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Film>() {
@@ -36,7 +34,6 @@ public class FilmOverviewController {
                 filmRuntime.setText(String.valueOf(newFilm.getRuntime()));
                 filmReleaseDate.setText(String.valueOf(newFilm.getReleaseDate().getYear()));
                 filmTitle.setText(newFilm.getTitle());
-
             }
         });
 
@@ -61,13 +58,13 @@ public class FilmOverviewController {
         MainJavaFX.mainJavaFXApplication.goToEditView();
     }
 
-    public ListView<Film> getFilmListView() {
-        return filmListView;
-    }
     @FXML
     public void goToAddScene(ActionEvent actionEvent) {
         MainJavaFX.mainJavaFXApplication.goToAddView();
 
     }
+    /*public ListView<Film> getFilmListView() {
+        return filmListView;
+    }*/
 }
 

@@ -2,7 +2,6 @@ package no.hiof.olawp.oblig4.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -26,12 +25,6 @@ public class FilmAddController {
     private Stage stage;
     private MainJavaFX mainJavaFX;
 
-
-
-    @FXML
-    public void initialize(){
-    }
-
     @FXML
     private void cancelFilm(ActionEvent actionEvent){
         stage.close();
@@ -42,13 +35,13 @@ public class FilmAddController {
     private void addFilm(ActionEvent actionEvent){
         try{
             if (filmTitleAdd.getText().isEmpty())
-                throw new Error("Please type in a title."); //Vises bare i konsollen
-            if (filmDescAdd.getText().isEmpty())
-                throw new Error("Please type in a small description");
-            if (filmReleaseAdd.getValue() == null)
-                throw new Error("Pick a relase date");
-            if (Integer.parseInt(filmRuntimeAdd.getText()) >= 1000)
-                throw new Error("Type in a runtime");
+               MainJavaFX.mainJavaFXApplication.showMessageBox("Type in a title.");
+            else if (filmDescAdd.getText().isEmpty())
+                MainJavaFX.mainJavaFXApplication.showMessageBox("Please add a description");
+            else if (filmReleaseAdd.getValue() == null)
+                MainJavaFX.mainJavaFXApplication.showMessageBox("Pick a release date.");
+            else if (filmRuntimeAdd.getText().isEmpty())
+                MainJavaFX.mainJavaFXApplication.showMessageBox("Type in the movies runtime.");
 
             Production aFilm = new Film(filmTitleAdd.getText(),Integer.parseInt(filmRuntimeAdd.getText()),filmDescAdd.getText(),filmReleaseAdd.getValue());
             mainJavaFX.mainJavaFXApplication.getAllFilms().add((Film) aFilm);
