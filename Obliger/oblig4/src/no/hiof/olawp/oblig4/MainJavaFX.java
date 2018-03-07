@@ -33,7 +33,6 @@ public class MainJavaFX extends Application {
     }
 
 
-
     @Override
     public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
@@ -124,7 +123,7 @@ public class MainJavaFX extends Application {
 
     public void showMessageBox(String message){
         Alert e = new Alert(Alert.AlertType.ERROR);
-        e.setTitle("Error during loading of GUI.");
+        e.setTitle("An error occurred");
         e.setHeaderText(null);
         e.setContentText(message);
         e.show();

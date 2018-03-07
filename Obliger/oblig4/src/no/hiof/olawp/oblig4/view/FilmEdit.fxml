@@ -37,6 +37,6 @@
         <Button layoutX="492.0" layoutY="361.0" mnemonicParsing="false" onAction="#cancelFilm" text="Cancel" AnchorPane.rightAnchor="56.0" />
         <Button layoutX="553.0" layoutY="361.0" mnemonicParsing="false" onAction="#editFilm" text="OK" AnchorPane.rightAnchor="14.0" />
         <DatePicker fx:id="filmReleaseEdit" layoutX="336.0" layoutY="239.0" prefHeight="25.0" prefWidth="168.0" AnchorPane.rightAnchor="96.0" />
-        <ListView fx:id="editListView" layoutX="14.0" layoutY="14.0" prefHeight="373.0" prefWidth="200.0" />
+        <ListView fx:id="editListView" layoutX="14.0" layoutY="14.0" prefHeight="373.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="386.0" AnchorPane.topAnchor="14.0" />
     </children>
 </AnchorPane>

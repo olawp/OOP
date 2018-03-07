@@ -1,5 +1,7 @@
 package no.hiof.olawp.oblig4.controller;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
@@ -9,7 +11,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import no.hiof.olawp.oblig4.MainJavaFX;
 import no.hiof.olawp.oblig4.model.Film;
-
 
 public class FilmEditController {
     @FXML
@@ -25,7 +26,6 @@ public class FilmEditController {
     @FXML
     private Stage stage;
 
-    //public static MainJavaFX mainJavaFXApplication;
 
     @FXML
     public void initialize() {
@@ -35,10 +35,20 @@ public class FilmEditController {
             editListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
         }
 
+        editListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Film>() {
+            @Override
+            public void changed(ObservableValue<? extends Film> observable, Film oldFilm, Film newFilm) {
+                filmDescEdit.setText(newFilm.getDescription());
+                filmRuntimeEdit.setText(String.valueOf(newFilm.getRuntime()));
+                filmReleaseEdit.setValue(newFilm.getReleaseDate());
+                filmTitleEdit.setText(newFilm.getTitle());
+            }
+        });
     }
 
     @FXML
     private void editFilm(ActionEvent actionEvent){
+
 
             if (filmTitleEdit.getText().isEmpty())
                 MainJavaFX.mainJavaFXApplication.showMessageBox("Type in a title.");

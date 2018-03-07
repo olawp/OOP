@@ -2,14 +2,16 @@ package no.hiof.olawp.oblig4.controller;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import no.hiof.olawp.oblig4.MainJavaFX;
 import no.hiof.olawp.oblig4.model.Film;
 
 public class FilmOverviewController {
+    @FXML
+    private Button filmBtnEdit;
     @FXML
     private Label filmTitle;
     @FXML
@@ -21,7 +23,6 @@ public class FilmOverviewController {
     @FXML
     private ListView<Film> filmListView;
 
-    //public ObservableList<Film> filmObservableList = MainJavaFX.mainJavaFXApplication.getAllFilms();
 
     @FXML
     public void initialize(){
@@ -40,6 +41,13 @@ public class FilmOverviewController {
         if (!filmListView.getItems().isEmpty()) {
             filmListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
         }
+        //Går til redigeringsvinduet
+        filmBtnEdit.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                MainJavaFX.mainJavaFXApplication.goToEditView();
+            }
+        });
     }
 
     @FXML
@@ -52,11 +60,6 @@ public class FilmOverviewController {
             }
     }
 
-
-    @FXML
-    public void goToEditScene(ActionEvent actionEvent){
-        MainJavaFX.mainJavaFXApplication.goToEditView();
-    }
 
     @FXML
     public void goToAddScene(ActionEvent actionEvent) {
