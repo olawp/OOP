@@ -25,7 +25,15 @@ public class FilmOverviewController {
 
 
     @FXML
-    public void initialize(){
+    public void initialize() {
+        filmBtnEdit.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                MainJavaFX.mainJavaFXApplication.goToEditView();
+
+            }
+        });
+
         filmListView.setItems(MainJavaFX.mainJavaFXApplication.getAllFilms());
         filmListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         filmListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Film>() {
@@ -41,13 +49,8 @@ public class FilmOverviewController {
         if (!filmListView.getItems().isEmpty()) {
             filmListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
         }
-        //Går til redigeringsvinduet
-        filmBtnEdit.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                MainJavaFX.mainJavaFXApplication.goToEditView();
-            }
-        });
+
+
     }
 
     @FXML
@@ -66,8 +69,6 @@ public class FilmOverviewController {
         MainJavaFX.mainJavaFXApplication.goToAddView();
 
     }
-    /*public ListView<Film> getFilmListView() {
-        return filmListView;
-    }*/
+
 }
 

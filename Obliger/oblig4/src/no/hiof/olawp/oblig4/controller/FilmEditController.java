@@ -31,10 +31,6 @@ public class FilmEditController {
     public void initialize() {
         editListView.setItems(MainJavaFX.mainJavaFXApplication.getAllFilms());
 
-        if (!editListView.getItems().isEmpty()) {
-            editListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
-        }
-
         editListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Film>() {
             @Override
             public void changed(ObservableValue<? extends Film> observable, Film oldFilm, Film newFilm) {
@@ -44,7 +40,12 @@ public class FilmEditController {
                 filmTitleEdit.setText(newFilm.getTitle());
             }
         });
+
+        if (!editListView.getItems().isEmpty()) {
+            editListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
+        }
     }
+
 
     @FXML
     private void editFilm(ActionEvent actionEvent){
@@ -67,6 +68,7 @@ public class FilmEditController {
 
     }
 
+
     private void updateInfo(){
         editListView.getSelectionModel().getSelectedItem().setTitle(filmTitleEdit.getText());
         editListView.getSelectionModel().getSelectedItem().setDescription(filmDescEdit.getText());
@@ -74,10 +76,12 @@ public class FilmEditController {
         editListView.getSelectionModel().getSelectedItem().setReleaseDate(filmReleaseEdit.getValue());
     }
 
+
     @FXML
     private void cancelFilm(ActionEvent actionEvent){
         stage.close();
     }
+
 
     public void setStage(Stage stage) {
         this.stage = stage;

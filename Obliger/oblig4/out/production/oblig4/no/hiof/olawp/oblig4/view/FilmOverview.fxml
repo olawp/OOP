@@ -17,7 +17,7 @@
             </font>
         </Label>
         <Label layoutX="333.0" layoutY="65.0" prefHeight="17.0" prefWidth="64.0" text="Description" AnchorPane.rightAnchor="403.0" />
-        <TextArea fx:id="filmDescription" editable="false" layoutX="333.0" layoutY="82.0" prefHeight="130.0" prefWidth="398.0" AnchorPane.rightAnchor="69.0" />
+        <TextArea fx:id="filmDescription" editable="false" layoutX="333.0" layoutY="82.0" prefHeight="130.0" prefWidth="398.0" wrapText="true" AnchorPane.rightAnchor="69.0" />
         <TextField fx:id="filmReleaseDate" editable="false" layoutX="333.0" layoutY="236.0" prefHeight="25.0" prefWidth="398.0" AnchorPane.rightAnchor="69.0" />
         <Label layoutX="333.0" layoutY="219.0" text="Releasedate" AnchorPane.rightAnchor="403.0" />
         <Label layoutX="333.0" layoutY="268.0" prefHeight="17.0" prefWidth="64.0" text="Runtime" AnchorPane.rightAnchor="403.0" />
