@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import no.hiof.olawp.oblig4.controller.FilmAddController;
@@ -49,9 +50,12 @@ public class MainJavaFX extends Application {
             Scene mainScene = new Scene(mainLayout, 800, 600);
             primaryStage.setScene(mainScene);
             primaryStage.setTitle("Movie overview");
+            Image applicationIcon = new Image(getClass().getResourceAsStream("olaThinking.png"));
+            primaryStage.getIcons().add(applicationIcon);
             primaryStage.setResizable(false);
             primaryStage.centerOnScreen();
             primaryStage.show();
+
         }
         catch (IOException ioe){
             showMessageBox(ioe.getMessage());
@@ -75,6 +79,8 @@ public class MainJavaFX extends Application {
 
             editStage.setScene(editScene);
             editStage.setTitle("Edit movie");
+            Image applicationIcon = new Image(getClass().getResourceAsStream("olaThinking.png"));
+            editStage.getIcons().add(applicationIcon);
             editStage.setResizable(false);
             editStage.centerOnScreen();
             editStage.showAndWait();
@@ -106,6 +112,8 @@ public class MainJavaFX extends Application {
 
             addStage.setScene(addScene);
             addStage.setTitle("Add movie");
+            Image applicationIcon = new Image(getClass().getResourceAsStream("olaThinking.png"));
+            addStage.getIcons().add(applicationIcon);
             addStage.setResizable(false);
             addStage.centerOnScreen();
             addStage.showAndWait();

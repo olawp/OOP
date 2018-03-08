@@ -26,13 +26,17 @@ public class FilmOverviewController {
 
     @FXML
     public void initialize() {
-        filmBtnEdit.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                MainJavaFX.mainJavaFXApplication.goToEditView();
+            filmBtnEdit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    if (!filmListView.getItems().isEmpty())
+                    MainJavaFX.mainJavaFXApplication.goToEditView();
+                    else{
+                        MainJavaFX.mainJavaFXApplication.showMessageBox("You cant edit a movie when the list is empty");
+                    }
 
-            }
-        });
+                }
+            });
 
         filmListView.setItems(MainJavaFX.mainJavaFXApplication.getAllFilms());
         filmListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -46,10 +50,18 @@ public class FilmOverviewController {
             }
         });
 
+<<<<<<< HEAD
         filmListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
 
 
 
+=======
+
+
+        if (!filmListView.getItems().isEmpty()) {
+            filmListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
+        }
+>>>>>>> master
     }
 
     @FXML

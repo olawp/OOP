@@ -48,8 +48,6 @@ public class FilmEditController {
 
     @FXML
     private void editFilm(ActionEvent actionEvent){
-
-
             if (filmTitleEdit.getText().isEmpty())
                 MainJavaFX.mainJavaFXApplication.showMessageBox("Type in a title.");
             else if (filmDescEdit.getText().isEmpty())
