@@ -2,22 +2,16 @@ package no.hiof.olawp.oblig4.controller;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
-import no.hiof.olawp.oblig4.Main;
 import no.hiof.olawp.oblig4.MainJavaFX;
 import no.hiof.olawp.oblig4.model.Film;
 
 public class FilmOverviewController {
     @FXML
-    private Button filmBtnNew;
-    @FXML
     private Button filmBtnEdit;
-    @FXML
-    private Button filmBtnDelete;
     @FXML
     private Label filmTitle;
     @FXML
@@ -29,16 +23,16 @@ public class FilmOverviewController {
     @FXML
     private ListView<Film> filmListView;
 
-    private Stage stage;
-    private Film pickedFilm;
-    private int filmIndex = 0;
-    private MainJavaFX mainJavaFX;
-    public ObservableList<Film> filmObservableList = MainJavaFX.mainJavaFXApplication.getAllFilms();
-
 
     @FXML
-    public void initialize(){
+    public void initialize() {
+        filmBtnEdit.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                MainJavaFX.mainJavaFXApplication.goToEditView();
 
+            }
+        });
 
         filmListView.setItems(MainJavaFX.mainJavaFXApplication.getAllFilms());
         filmListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -49,18 +43,32 @@ public class FilmOverviewController {
                 filmRuntime.setText(String.valueOf(newFilm.getRuntime()));
                 filmReleaseDate.setText(String.valueOf(newFilm.getReleaseDate().getYear()));
                 filmTitle.setText(newFilm.getTitle());
-
             }
         });
+
+        if (!filmListView.getItems().isEmpty()) {
+            filmListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
+        }
+
+
     }
 
     @FXML
-    public void goToEditScene(ActionEvent actionEvent){
-        MainJavaFX.mainJavaFXApplication.goToEditView();
+    public void deleteFilm(ActionEvent actionEvent){
+            if (!filmListView.getItems().isEmpty()) {
+                filmListView.getItems().remove(filmListView.getSelectionModel().getSelectedIndex());
+            }
+            else {
+                MainJavaFX.mainJavaFXApplication.showMessageBox("You cant delete an object that does not exist. Lul");
+            }
     }
 
-    public ListView<Film> getFilmListView() {
-        return filmListView;
+
+    @FXML
+    public void goToAddScene(ActionEvent actionEvent) {
+        MainJavaFX.mainJavaFXApplication.goToAddView();
+
     }
+
 }
 
