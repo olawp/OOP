@@ -33,9 +33,9 @@ public class FilmAddController {
 
     @FXML
     private void addFilm(ActionEvent actionEvent){
-        try{
+        try {
             if (filmTitleAdd.getText().isEmpty())
-               MainJavaFX.mainJavaFXApplication.showMessageBox("Type in a title.");
+                MainJavaFX.mainJavaFXApplication.showMessageBox("Type in a title.");
             else if (filmDescAdd.getText().isEmpty())
                 MainJavaFX.mainJavaFXApplication.showMessageBox("Please add a description");
             else if (filmReleaseAdd.getValue() == null)
@@ -43,17 +43,12 @@ public class FilmAddController {
             else if (filmRuntimeAdd.getText().isEmpty())
                 MainJavaFX.mainJavaFXApplication.showMessageBox("Type in the movies runtime.");
 
-<<<<<<< HEAD
 
             if (!filmTitleAdd.getText().isEmpty() && !filmDescAdd.getText().isEmpty() && filmReleaseAdd.getValue() != null && !filmRuntimeAdd.getText().isEmpty()) {
-=======
-            if (!filmTitleAdd.getText().isEmpty() && filmDescAdd.getText().isEmpty() && filmReleaseAdd.getValue() != null && filmRuntimeAdd.getText().isEmpty()) {
->>>>>>> master
                 Production aFilm = new Film(filmTitleAdd.getText(), Integer.parseInt(filmRuntimeAdd.getText()), filmDescAdd.getText(), filmReleaseAdd.getValue());
-                mainJavaFX.mainJavaFXApplication.getAllFilms().add((Film) aFilm);
+                MainJavaFX.mainJavaFXApplication.getAllFilms().add((Film) aFilm);
                 stage.close();
             }
-
 
         }
         catch (Error e){

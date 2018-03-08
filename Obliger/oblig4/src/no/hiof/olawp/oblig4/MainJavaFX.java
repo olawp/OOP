@@ -23,6 +23,7 @@ public class MainJavaFX extends Application {
     private Stage primaryStage;
     public static MainJavaFX mainJavaFXApplication;
     public int selectedItem = 0;
+    private Stage stage;
 
     public MainJavaFX(){
         allFilms.add(new Film("Superman",69,"A movie about a super guy.", LocalDate.of(2011,9,11)));
@@ -140,6 +141,7 @@ public class MainJavaFX extends Application {
     public ObservableList<Film> getAllFilms() {
         return allFilms;
     }
+
 
     public static void main(String[] args) {
         launch(args);
