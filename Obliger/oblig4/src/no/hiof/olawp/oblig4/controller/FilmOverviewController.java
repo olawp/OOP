@@ -46,9 +46,8 @@ public class FilmOverviewController {
             }
         });
 
-        if (!filmListView.getItems().isEmpty()) {
-            filmListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
-        }
+        filmListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
+
 
 
     }

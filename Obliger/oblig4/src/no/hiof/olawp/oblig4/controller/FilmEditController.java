@@ -41,9 +41,8 @@ public class FilmEditController {
             }
         });
 
-        if (!editListView.getItems().isEmpty()) {
-            editListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
-        }
+
+        editListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
     }
 
 
