@@ -53,11 +53,6 @@ public class FilmOverviewController {
         filmListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
 
 
-
-        if (!filmListView.getItems().isEmpty()) {
-            filmListView.getSelectionModel().select(MainJavaFX.mainJavaFXApplication.selectedItem);
-        }
-
     }
 
     @FXML
