@@ -11,10 +11,10 @@ import java.util.Scanner;
 public class FileHandler {
 
     public static void readFile() {
-        ArrayList<Film> moveieArrayList = new ArrayList<>();
 
         String fileName = "filmer.csv";
         File file = new File(fileName);
+        String noe = "noe"; //Variable for testing invalid filepath
 
         try(BufferedReader br = new BufferedReader(new FileReader(file))){
             String line;
@@ -30,16 +30,35 @@ public class FileHandler {
 
 
                 Film lmao = new Film(title,runtime,description,date);
-                //System.out.println(lmao);
                 MainJavaFX.mainJavaFXApplication.getAllFilms().add(lmao);
 
             }
 
 
 
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException fnfe) {
+            MainJavaFX.mainJavaFXApplication.showMessageBox("Error when trying to read file: " + fnfe.getMessage());
+        }catch (IOException ioexc ){
+            System.out.println(ioexc);
         }
 
+    }
+
+   public static void writeToFile(){
+        String fileName ="filmer.csv";
+        File file = new File(fileName);
+
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(fileName))) {
+            for (Film aFilm : MainJavaFX.mainJavaFXApplication.getAllFilms()){
+                    bw.write(aFilm.getTitle() + ";" + aFilm.getDescription() + ";" + aFilm.getRuntime() + ";" + aFilm.getReleaseDate());
+                    bw.newLine();
+                }
+
+            } catch (FileNotFoundException fnfe){
+            MainJavaFX.mainJavaFXApplication.showMessageBox("Error when trying to write to file: " + fnfe.getMessage());
+        }
+        catch (IOException ioexc){
+            System.out.println(ioexc);
+        }
     }
 }

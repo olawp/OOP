@@ -31,10 +31,11 @@
         </font>
     </Label>
     <TextField fx:id="filmTitleAdd" layoutX="134.0" layoutY="35.0" prefHeight="25.0" prefWidth="384.0" AnchorPane.rightAnchor="82.0" />
-    <TextField fx:id="filmRuntimeAdd" layoutX="134.0" layoutY="272.0" prefHeight="25.0" prefWidth="384.0" AnchorPane.rightAnchor="82.0" />
-    <TextArea fx:id="filmDescAdd" layoutX="134.0" layoutY="80.0" prefHeight="148.0" prefWidth="384.0" wrapText="true" AnchorPane.rightAnchor="82.0" />
-    <Button fx:id="cancelAdd" layoutX="492.0" layoutY="361.0" mnemonicParsing="false" onAction="#cancelFilm" text="Cancel" AnchorPane.rightAnchor="56.0" />
-    <Button fx:id="addFilm" layoutX="553.0" layoutY="361.0" mnemonicParsing="false" onAction="#addFilm" text="OK" AnchorPane.rightAnchor="14.0" />
+        <TextArea fx:id="filmDescAdd" layoutX="134.0" layoutY="80.0" prefHeight="148.0" prefWidth="384.0" wrapText="true" AnchorPane.rightAnchor="82.0" />
+
     <DatePicker fx:id="filmReleaseAdd" layoutX="134.0" layoutY="239.0" AnchorPane.rightAnchor="292.0" />
+        <TextField fx:id="filmRuntimeAdd" layoutX="134.0" layoutY="272.0" prefHeight="25.0" prefWidth="384.0" AnchorPane.rightAnchor="82.0" />
+        <Button fx:id="cancelAdd" layoutX="492.0" layoutY="361.0" mnemonicParsing="false" onAction="#cancelFilm" text="Cancel" AnchorPane.rightAnchor="56.0" />
+        <Button fx:id="addFilm" layoutX="553.0" layoutY="361.0" mnemonicParsing="false" onAction="#addFilm" text="OK" AnchorPane.rightAnchor="14.0" />
     </children>
 </AnchorPane>

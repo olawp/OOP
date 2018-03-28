@@ -9,6 +9,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import no.hiof.olawp.oblig5.FileHandler;
 import no.hiof.olawp.oblig5.MainJavaFX;
 import no.hiof.olawp.oblig5.model.Film;
 

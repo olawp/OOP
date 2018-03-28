@@ -7,6 +7,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import no.hiof.olawp.oblig5.FileHandler;
 import no.hiof.olawp.oblig5.MainJavaFX;
 import no.hiof.olawp.oblig5.model.Film;
 import no.hiof.olawp.oblig5.model.Production;
@@ -43,7 +44,7 @@ public class FilmAddController {
             else if (filmRuntimeAdd.getText().isEmpty())
                 MainJavaFX.mainJavaFXApplication.showMessageBox("Type in the movies runtime.");
 
-            if (!filmTitleAdd.getText().isEmpty() && filmDescAdd.getText().isEmpty() && filmReleaseAdd.getValue() != null && filmRuntimeAdd.getText().isEmpty()) {
+            if (!filmTitleAdd.getText().isEmpty() && !filmDescAdd.getText().isEmpty() && filmReleaseAdd.getValue() != null && !filmRuntimeAdd.getText().isEmpty()) {
                 Production aFilm = new Film(filmTitleAdd.getText(), Integer.parseInt(filmRuntimeAdd.getText()), filmDescAdd.getText(), filmReleaseAdd.getValue());
                 mainJavaFX.mainJavaFXApplication.getAllFilms().add((Film) aFilm);
                 stage.close();

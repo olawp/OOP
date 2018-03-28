@@ -14,6 +14,7 @@ import no.hiof.olawp.oblig5.controller.FilmAddController;
 import no.hiof.olawp.oblig5.controller.FilmEditController;
 import no.hiof.olawp.oblig5.model.Film;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.LocalDate;
 
@@ -32,8 +33,8 @@ public class MainJavaFX extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
-        FileHandler.readFile();
         goToPrimaryView();
+        FileHandler.readFile();
     }
 
     public void goToPrimaryView(){
@@ -42,7 +43,7 @@ public class MainJavaFX extends Application {
             fxmlLoader.setLocation(getClass().getResource("view/FilmOverview.fxml"));
             Parent mainLayout = fxmlLoader.load();
 
-            Scene mainScene = new Scene(mainLayout, 800, 600);
+            Scene mainScene = new Scene(mainLayout, 1000, 600);
             primaryStage.setScene(mainScene);
             primaryStage.setTitle("Movie overview");
             Image applicationIcon = new Image(getClass().getResourceAsStream("olaThinking.png"));
@@ -69,7 +70,7 @@ public class MainJavaFX extends Application {
             filmEditController.setStage(editStage);
             Scene editScene = new Scene(editLayout,600,400);
 
-            editStage.initModality(Modality.APPLICATION_MODAL);
+            editStage.initModality(Modality.WINDOW_MODAL);
             editStage.initOwner(primaryStage);
 
             editStage.setScene(editScene);
@@ -102,7 +103,7 @@ public class MainJavaFX extends Application {
             filmAddController.setStage(addStage);
             Scene addScene = new Scene(addLayout,600,400);
 
-            addStage.initModality(Modality.APPLICATION_MODAL);
+            addStage.initModality(Modality.WINDOW_MODAL);
             addStage.initOwner(primaryStage);
 
             addStage.setScene(addScene);
@@ -130,6 +131,11 @@ public class MainJavaFX extends Application {
         e.setHeaderText(null);
         e.setContentText(message);
         e.show();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        FileHandler.writeToFile();
     }
 
     public ObservableList<Film> getAllFilms() {
