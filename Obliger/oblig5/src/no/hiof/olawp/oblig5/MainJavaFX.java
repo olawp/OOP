@@ -35,6 +35,7 @@ public class MainJavaFX extends Application {
         this.primaryStage = primaryStage;
         goToPrimaryView();
         FileHandler.readFile();
+        goToPrimaryView(); //Kaller på metoden igjen for å automatisk velge film fra arrayet
     }
 
     public void goToPrimaryView(){
@@ -130,7 +131,7 @@ public class MainJavaFX extends Application {
         e.setTitle("An error occurred");
         e.setHeaderText(null);
         e.setContentText(message);
-        e.show();
+        e.showAndWait();
     }
 
     @Override

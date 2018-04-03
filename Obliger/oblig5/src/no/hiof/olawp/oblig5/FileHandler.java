@@ -49,17 +49,18 @@ public class FileHandler {
 
         File file = new File("filmer.csv");
 
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
-            for (Film aFilm : MainJavaFX.mainJavaFXApplication.getAllFilms()){
+        if (file.exists()) {
+
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+                for (Film aFilm : MainJavaFX.mainJavaFXApplication.getAllFilms()) {
                     bw.write(aFilm.getTitle() + ";" + aFilm.getDescription() + ";" + aFilm.getRuntime() + ";" + aFilm.getReleaseDate() + ";" + aFilm.getPosterURL());
                     bw.newLine();
                 }
+            }catch (IOException ioexc) {
+                System.out.println(ioexc);
             }
-        catch (FileNotFoundException e){
-            MainJavaFX.mainJavaFXApplication.showMessageBox("Error when trying to write to file: " + e.getMessage());
         }
-        catch (IOException ioexc){
-            System.out.println(ioexc);
-        }
+        else
+            MainJavaFX.mainJavaFXApplication.showMessageBox("Error when trying to write to file");
     }
 }
