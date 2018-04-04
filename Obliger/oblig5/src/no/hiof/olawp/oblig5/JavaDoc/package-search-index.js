@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"no.hiof.olawp.oblig5"},{"l":"no.hiof.olawp.oblig5.controller"},{"l":"no.hiof.olawp.oblig5.model"}]

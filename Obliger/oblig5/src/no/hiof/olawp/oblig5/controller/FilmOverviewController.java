@@ -73,8 +73,6 @@ public class FilmOverviewController {
                     Image image = new Image("https://image.tmdb.org/t/p/w500" + newFilm.getPosterURL());
                     filmPoster.setImage(image);
                 }
-                else
-                    return;
 
             }
         });

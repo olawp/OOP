@@ -4,7 +4,15 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * Production is a class representing a production, in this case a film or a TvShow
+ * Holds information like title, runtime, description, relasedate, director and a list of roles
+ *
+ * @author Ola Wethal Petersen
+ */
+
 public abstract class Production {
+
     private String title;
     private int runtime;
     private String description;
@@ -12,6 +20,14 @@ public abstract class Production {
     private Person director;
     private ArrayList<Role> roleArray = new ArrayList<>();
 
+
+    /**
+     *
+     * @param title title of the production
+     * @param runtime runtime of the production
+     * @param description description of the production
+     * @param releaseDate releasedate of the production
+     */
     public Production(String title, int runtime, String description, LocalDate releaseDate) {
         this.title = title;
         this.runtime = runtime;
@@ -19,40 +35,72 @@ public abstract class Production {
         this.releaseDate = releaseDate;
     }
 
+    /**
+     *
+     * @param title title of the production
+     * @param runtime runtime of the production
+     * @param releaseDate releasedate of the production
+     */
+
     public Production(String title, int runtime,LocalDate releaseDate) {
         this.title = title;
         this.runtime = runtime;
         this.releaseDate = releaseDate;
     }
 
+    /**
+     *
+     * @param title title of the production
+     * @param runtime runtime of the production
+     */
+
     public Production(String title, int runtime) {
         this.title = title;
         this.runtime = runtime;
     }
 
-    public Production(){
-
-    }
+    /**
+     *
+     * @param title title of the production
+     */
 
     public Production(String title) {
         this.title = title;
     }
 
-    //Meotde for å legge til en rolle
+    /**
+     * Empty constructor
+     */
+    public Production(){
+
+    }
+
+
+    /**
+     *
+     * @param role parameter containing info about a role
+     *
+     * Method for adding a role to the role array
+     */
     public void addARole(Role role){
         this.roleArray.add(role);
     }
 
-    //En annen måte å gjøre dette på er å lage et array som du putter role objektene i. I addMultipleRoles metoden
-    //flytter du elementee fra dette arrayet over til Rolearray.
-    //Jeg valgte denne metoden siden jeg syntes det var en mer fornuftig og praktisk måte å gjøre det på.
+
+
+    /**
+     *
+     * @param role parameter containing info about a role
+     *
+     * Method for adding multiple roles to the role array at the same time
+     */
     public void addMultipleRoles(Role ... role){
         this.roleArray.addAll(Arrays.asList(role));
     }
 
 
 
-    //Gettere og settere
+    // ************************ GETTERS AND SETTERS ************************
     public String getTitle() {
         return title;
     }

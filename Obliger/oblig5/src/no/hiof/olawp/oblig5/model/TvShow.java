@@ -3,7 +3,12 @@ package no.hiof.olawp.oblig5.model;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-
+/**
+ * TvShow is a class that represents a TvShow
+ * Holds information about the TvShows title, description, relasedate, runtime, number of season and a list containing episodes
+ *
+ *@author Ola Wethal Petersen
+ */
 public class TvShow implements Comparable<TvShow>{
     private String title;
     private String description;
@@ -13,7 +18,12 @@ public class TvShow implements Comparable<TvShow>{
     private int numberOfSeasons;
     private static ArrayList<TvShow> tvShowArray = new ArrayList<>();
 
-    //Konstruktør
+    /**
+     * Constructor for creating a TvShow object
+     * @param title title of the TvShow
+     * @param description a description of the TvShow
+     * @param releaseDate parameter containing the TvShows releasedate
+     */
     public TvShow(String title, String description, LocalDate releaseDate) {
         this.title = title;
         this.description = description;
@@ -21,8 +31,10 @@ public class TvShow implements Comparable<TvShow>{
         tvShowArray.add(this);
     }
 
-    //Oppgave 5
-    //Metode som oppdaterer den gjennomsnittlige spilletiden, blir kalt på i addepisode metoden hver gang en episoden blir lagt til.
+
+    /**
+     * Updates the average runtime of the TvShow. Gets called on every time a new episode gets added to the show.
+     */
     private void updateAverageRuntime(){
         float sum = 0;
 
@@ -35,8 +47,14 @@ public class TvShow implements Comparable<TvShow>{
     }
 
 
-    //Oppgave 4
-    //Printer ut alle episodene i en sesong
+
+
+    /**
+     *
+     * @param season tells us the which season a episode is in
+     *
+     * Prints ut a list of episodes with a specific season
+     */
     public void printSeason (int season){
 
         for (Episode e: episodeList){
@@ -48,8 +66,13 @@ public class TvShow implements Comparable<TvShow>{
 
 
 
-    //Oppgave 1, 7 og 8
-    //Metode som sjekker at sesongnummeret ikke er høyere enn current sesong + 1. Legger så til episoden og oppdaterer spilletiden.
+    /**
+     *
+     * @param episode parameter containing info about a certain episode
+     *
+     * Method for adding episodes to out arraylist. Checks if the episodes season does not equal the current seasons number + 2.
+     * Updates the average runtime after checking the seasonnumber.
+     */
     public void addEpisode(Episode episode){
         if(episode.getSeason()>numberOfSeasons + 1) {
             System.out.println("Cant add episode from this season. Add episode from an earlier season");
@@ -68,6 +91,12 @@ public class TvShow implements Comparable<TvShow>{
 
     //Oppretter et nytt array for å legge medlemmer av casten i. Bruker en for each løkke for å gå gjennom episodelisten til serien,
     // legger så til alle tingene som likker i RoleArray og legger de til i arrayet vi opprettet tidligere og returnerer det.
+
+    /**
+     *
+     * @return returns a array containing the cast of a production
+     * Method that creates an array with the members of a cast. Uses a for each to add all the castmembers to the array we created. Lastly returns the array.
+     */
     public ArrayList getCast(){
         ArrayList<Role>CastArray = new ArrayList<>();
         for (Episode a:episodeList){
@@ -77,15 +106,22 @@ public class TvShow implements Comparable<TvShow>{
     }
 
 
-
-    //Oppgave 3
-    //toString metoder
+    /**
+     *
+     * @return returns a string representation of the object
+     */
     @Override
     public String toString(){
         return title+ "  \n"  + description + " - Release date: " + releaseDate.getYear() + "\n";
     }
 
 
+    /**
+     *
+     * @param o representation of a TvShow
+     * @return return either 1,0 or -1, determining how the array will be sorted.
+     * Method used for sorting an array
+     */
     @Override
     public int compareTo(TvShow o) {
         int compare = this.getTitle().compareTo(o.getTitle());
@@ -98,7 +134,7 @@ public class TvShow implements Comparable<TvShow>{
         return 0;
     }
 
-    //Settere og gettere
+    // ************************ GETTERS AND SETTERS ************************
     public String getTitle() {
         return title;
     }
