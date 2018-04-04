@@ -12,11 +12,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="FileHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/no/hiof/olawp/oblig5/FileHandler.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="43">
               <caret line="26" column="47" lean-forward="false" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+=======
+            <state relative-caret-position="521">
+              <caret line="49" column="43" lean-forward="false" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -24,8 +29,13 @@
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/no/hiof/olawp/oblig5/Main.java">
+=======
+      <file leaf-file-name="filmer.csv" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/filmer.csv">
+>>>>>>> Stashed changes
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1393">
               <caret line="158" column="1" lean-forward="false" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
@@ -37,8 +47,13 @@
       <file leaf-file-name="MainJavaFX.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/no/hiof/olawp/oblig5/MainJavaFX.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="-950">
               <caret line="37" column="92" lean-forward="false" selection-start-line="37" selection-start-column="92" selection-end-line="37" selection-end-column="92" />
+=======
+            <state relative-caret-position="2601">
+              <caret line="156" column="2" lean-forward="false" selection-start-line="156" selection-start-column="2" selection-end-line="156" selection-end-column="2" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
@@ -47,6 +62,7 @@
       <file leaf-file-name="FilmOverviewController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/no/hiof/olawp/oblig5/controller/FilmOverviewController.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="672">
               <caret line="85" column="90" lean-forward="false" selection-start-line="85" selection-start-column="90" selection-end-line="85" selection-end-column="90" />
               <folding>
@@ -55,6 +71,11 @@
                 <element signature="e#2709#2710#0" expanded="true" />
                 <marker date="1522782408198" expanded="true" signature="2296:2312" ph="{...}" />
               </folding>
+=======
+            <state relative-caret-position="663">
+              <caret line="54" column="96" lean-forward="false" selection-start-line="54" selection-start-column="96" selection-end-line="54" selection-end-column="96" />
+              <folding />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -126,6 +147,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< Updated upstream
+=======
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+>>>>>>> Stashed changes
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -170,9 +197,12 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< Updated upstream
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
+=======
+>>>>>>> Stashed changes
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -295,13 +325,22 @@
       <workItem from="1521836344133" duration="5728000" />
       <workItem from="1522449943841" duration="1035000" />
       <workItem from="1522450995583" duration="5401000" />
+<<<<<<< Updated upstream
       <workItem from="1522756374740" duration="73000" />
       <workItem from="1522776105640" duration="6756000" />
+=======
+      <workItem from="1522462571419" duration="26000" />
+      <workItem from="1522522755835" duration="79000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="37579000" />
+=======
+    <option name="totallyTimeSpent" value="30855000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2758" height="1786" extended-state="6" />
@@ -787,8 +826,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/filmer.csv">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="2601">
+          <caret line="156" column="2" lean-forward="false" selection-start-line="156" selection-start-column="2" selection-end-line="156" selection-end-column="2" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
@@ -803,12 +847,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/no/hiof/olawp/oblig5/MainJavaFX.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="-950">
           <caret line="37" column="92" lean-forward="false" selection-start-line="37" selection-start-column="92" selection-end-line="37" selection-end-column="92" />
+=======
+        <state relative-caret-position="663">
+          <caret line="54" column="96" lean-forward="false" selection-start-line="54" selection-start-column="96" selection-end-line="54" selection-end-column="96" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/no/hiof/olawp/oblig5/model/Film.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -834,9 +884,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43">
           <caret line="26" column="47" lean-forward="false" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/no/hiof/olawp/oblig5/FileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="49" column="43" lean-forward="false" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filmer.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
