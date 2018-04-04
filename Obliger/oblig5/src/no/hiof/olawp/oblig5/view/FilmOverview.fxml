@@ -9,16 +9,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="581.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.hiof.olawp.oblig5.controller.FilmOverviewController">
+<AnchorPane prefHeight="581.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.hiof.olawp.oblig5.controller.FilmOverviewController">
     <children>
-        <ListView fx:id="filmListView" layoutX="14.0" layoutY="14.0" prefHeight="580.0" prefWidth="300.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+        <ListView fx:id="filmListView" layoutX="14.0" layoutY="89.0" prefHeight="482.0" prefWidth="300.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="89.0" />
         <Label fx:id="filmTitle" alignment="BOTTOM_LEFT" contentDisplay="CENTER" layoutX="317.0" layoutY="10.0" prefHeight="30.0" prefWidth="398.0" text="Movie" AnchorPane.rightAnchor="284.0">
             <font>
                 <Font size="20.0" />
             </font>
         </Label>
         <Label layoutX="317.0" layoutY="55.0" prefHeight="17.0" prefWidth="64.0" text="Description" AnchorPane.rightAnchor="618.0" />
-        <TextArea fx:id="filmDescription" editable="false" layoutX="317.0" layoutY="89.0" prefHeight="130.0" prefWidth="320.0" wrapText="true" AnchorPane.rightAnchor="362.0" />
+        <TextArea fx:id="filmDescription" editable="false" layoutX="317.0" layoutY="89.0" prefHeight="130.0" prefWidth="320.0" wrapText="true" AnchorPane.rightAnchor="362.0" AnchorPane.topAnchor="89.0" />
         <TextField fx:id="filmReleaseDate" editable="false" layoutX="317.0" layoutY="244.0" prefHeight="25.0" prefWidth="320.0" AnchorPane.rightAnchor="362.0" />
         <Label layoutX="317.0" layoutY="227.0" text="Releasedate" AnchorPane.rightAnchor="618.0" />
         <Label layoutX="317.0" layoutY="276.0" prefHeight="17.0" prefWidth="64.0" text="Runtime" AnchorPane.rightAnchor="618.0" />
@@ -27,5 +27,9 @@
         <Button fx:id="filmBtnEdit" layoutX="381.0" layoutY="544.0" mnemonicParsing="false" text="Edit" AnchorPane.bottomAnchor="11.666666666666629" AnchorPane.rightAnchor="581.3333333333333" />
         <Button fx:id="filmBtnDelete" layoutX="583.0" layoutY="541.0" mnemonicParsing="false" onAction="#deleteFilm" prefHeight="25.0" prefWidth="54.0" text="Delete" AnchorPane.bottomAnchor="14.666666666666629" AnchorPane.rightAnchor="362.0" />
       <ImageView fx:id="filmPoster" fitHeight="500.0" fitWidth="332.0" layoutX="655.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnAZ" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#sortAZ" prefHeight="25.0" prefWidth="46.0" text="A - Z" />
+      <Button fx:id="btnZA" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#sortZA" text="Z - A " />
+      <Button fx:id="btnReleaseDESC" layoutX="71.0" layoutY="51.0" mnemonicParsing="false" onAction="#sortReleaseDESC" text="Releasedate DESC" />
+      <Button fx:id="btnReleaseASC" layoutX="71.0" layoutY="13.0" mnemonicParsing="false" onAction="#sortReleaseASC" prefHeight="25.0" prefWidth="112.0" text="Releasedate ASC" />
     </children>
 </AnchorPane>
