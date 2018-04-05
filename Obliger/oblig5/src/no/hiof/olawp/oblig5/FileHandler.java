@@ -33,7 +33,7 @@ public class FileHandler {
                 Film lmao = new Film(title,runtime,description,date,poster);
                 MainJavaFX.mainJavaFXApplication.getAllFilms().add(lmao);
             }
-            System.out.println(file.length());
+
 
 
 
