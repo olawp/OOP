@@ -35,10 +35,12 @@ public class FilmEditController {
         editListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Film>() {
             @Override
             public void changed(ObservableValue<? extends Film> observable, Film oldFilm, Film newFilm) {
-                filmDescEdit.setText(newFilm.getDescription());
-                filmRuntimeEdit.setText(String.valueOf(newFilm.getRuntime()));
-                filmReleaseEdit.setValue(newFilm.getReleaseDate());
-                filmTitleEdit.setText(newFilm.getTitle());
+                if (newFilm != null) {
+                    filmDescEdit.setText(newFilm.getDescription());
+                    filmRuntimeEdit.setText(String.valueOf(newFilm.getRuntime()));
+                    filmReleaseEdit.setValue(newFilm.getReleaseDate());
+                    filmTitleEdit.setText(newFilm.getTitle());
+                }
             }
         });
 
