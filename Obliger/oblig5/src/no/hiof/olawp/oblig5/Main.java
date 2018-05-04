@@ -61,7 +61,7 @@ public class Main {
 
 
         //Oppretter noen filmobjekter
-        /*
+
         Film goodBadUgly = new Film("The Good, The Bad and the Ugly",161,"A bounty hunting scam joins two men in an uneasy alliance against" +
                 " a third in a race to find a fortune in gold buried in a remote cemetery.", LocalDate.of(1966,11,23));
         Film americanPsycho = new Film("American Psycho", 102,"A wealthy New York investment banking executive, Patrick Bateman, hides his alternate psychopathic ego from his co-workers and friends as he delves deeper into his violent, hedonistic fantasies."
@@ -154,6 +154,6 @@ public class Main {
 
         Collections.sort(MrRobot.getEpisodeList());
         System.out.println(MrRobot.getEpisodeList());
-*/
+
     }
 }

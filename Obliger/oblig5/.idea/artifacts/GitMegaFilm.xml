@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GitMegaFilm">
+    <output-path>$PROJECT_DIR$/out/artifacts/GitMegaFilm</output-path>
+    <root id="archive" name="GitMegaFilm.jar">
+      <element id="archive" name="GitMegaFilm.jar">
+        <element id="module-output" name="oblig5" />
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
